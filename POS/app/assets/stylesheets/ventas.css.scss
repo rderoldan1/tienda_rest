@@ -31,4 +31,10 @@ body{
     #error a { border: 1px solid #900; color: #900; }
     #notice a:hover, #error a:hover { color: #333; border: 1px solid #333; }
   }
+
+  #footer{
+    with:80%;
+    margin:0 auto;
+    color:white;
+  }
 }
