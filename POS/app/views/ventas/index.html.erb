@@ -1,0 +1,21 @@
+<h2>Lista de Productos</h2>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Valor</th>
+    <th>Cantidad</th>
+  </tr>
+  <% @productos.each do |producto| %>
+     <%= form_for :venta, :url => '/ventas/new' do |f| %>
+        <%= f.hidden_field :producto_id, :value => producto["id"] %>
+        <tr>
+          <td><%= producto["nombre"] %></td>
+          <td><%= producto["precio"] %></td>
+          <td><%= f.text_field :cantidad %></td>
+          <td><%= f.submit "Comprar", :confirm => "Esta seguro?" %></td>
+        </tr>
+
+     <% end %>
+  <% end %>
+</table>
+

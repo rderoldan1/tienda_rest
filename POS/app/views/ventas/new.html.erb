@@ -1,0 +1,4 @@
+<h1>Eres el feliz comprador de <%= @compra["venta"]["cantidad"] %> deliciosas <%= @compra["producto"]["nombre"] %>
+    por un valor de <%= number_to_currency(@compra["venta"]["precio"])%>
+</h1>
+<%= link_to "Comprar Mas", root_path %>
